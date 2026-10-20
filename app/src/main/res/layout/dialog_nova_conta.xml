@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nova conta"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Nome da Conta -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome da conta">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNomeConta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Valor -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Valor (R$)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtValorConta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Categoria (ID spinnerCategoria) -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Categoria">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinnerCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="Outro" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Tipo de Conta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tipo de conta"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/grupoTipoConta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioFixa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Conta fixa (Recorrente por dia)" />
+
+            <RadioButton
+                android:id="@+id/radioVariavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conta variável / do mês" />
+
+        </RadioGroup>
+
+        <!-- Container para Dia Fixo (ID containerDiaFixo e edtDiaFixo) -->
+        <LinearLayout
+            android:id="@+id/containerDiaFixo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dia do vencimento (Ex: 10)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDiaFixo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Container para Data Completa (ID containerDataCompleta) -->
+        <LinearLayout
+            android:id="@+id/containerDataCompleta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data de vencimento"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSelecionarVencimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecionar data" />
+
+            <TextView
+                android:id="@+id/textDataVencimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Nenhuma data selecionada" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

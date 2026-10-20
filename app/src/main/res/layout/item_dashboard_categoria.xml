@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingVertical="12dp">
+
+    <!-- Pílula de Porcentagem -->
+    <TextView
+        android:id="@+id/txtPorcentagemPill"
+        android:layout_width="48dp"
+        android:layout_height="28dp"
+        android:background="#EF4444"
+        android:gravity="center"
+        android:text="42%"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Nome e Ícone da Categoria -->
+    <TextView
+        android:id="@+id/txtNomeCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:text="💼 Salário"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Valor Total da Categoria -->
+    <TextView
+        android:id="@+id/txtValorCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 700,00"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.PlanWin" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cores de fundo e superfícies no modo escuro -->
+        <item name="android:colorBackground">#121414</item>
+        <item name="colorSurface">#1B1D1D</item>
+        <item name="colorSurfaceContainer">#232626</item>
+
+        <!-- Cor primária ajustada para destacar no escuro -->
+        <item name="colorPrimary">#4DB6AC</item>
+
+        <!-- Cores automáticas para textos e ícones padrão do Material 3 -->
+        <item name="colorOnSurface">#E1E3E3</item>
+        <item name="colorOnSurfaceVariant">#C2C7C7</item>
+    </style>
+
+    <style name="Theme.PlanWin" parent="Base.Theme.PlanWin" />
+</resources>

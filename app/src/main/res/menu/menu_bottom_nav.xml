@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navInicio"
+        android:icon="@drawable/ic_nav_inicio"
+        android:title="Início" />
+
+    <item
+        android:id="@+id/navContas"
+        android:icon="@drawable/ic_nav_contas"
+        android:title="Contas" />
+
+    <item
+        android:id="@+id/navRendas"
+        android:icon="@drawable/ic_nav_rendas"
+        android:title="Rendas" />
+
+    <item
+        android:id="@+id/navRelatorios"
+        android:icon="@drawable/ic_nav_relatorios"
+        android:title="Relatórios" />
+
+</menu>
